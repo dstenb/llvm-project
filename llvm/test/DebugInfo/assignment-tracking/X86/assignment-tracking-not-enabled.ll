@@ -1,8 +1,8 @@
-; RUN: llc %s -stop-after=finalize-isel -o - \
+; RUN: llc %s -stop-after=finalize-isel -experimental-debug-variable-locations=true -o - \
 ; RUN: | FileCheck %s --implicit-check-not=DBG_
 
 
-; RUN: llc --try-experimental-debuginfo-iterators %s -stop-after=finalize-isel -o - \
+; RUN: llc -experimental-debug-variable-locations=true --try-experimental-debuginfo-iterators %s -stop-after=finalize-isel -o - \
 ; RUN: | FileCheck %s --implicit-check-not=DBG_
 
 ;; Check that SelectionDAG downgrades dbg.assigns to dbg.values if assignment

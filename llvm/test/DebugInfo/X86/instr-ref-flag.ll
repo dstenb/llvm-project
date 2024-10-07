@@ -1,4 +1,4 @@
-; RUN: llc %s -o - -stop-before=finalize-isel -march=x86-64 \
+; RUN: llc %s -o - -stop-before=finalize-isel -experimental-debug-variable-locations=true -march=x86-64 \
 ; RUN: | FileCheck %s --check-prefixes=INSTRREFON
 ; RUN: llc %s -o - -stop-before=finalize-isel -march=x86-64 \
 ; RUN:    -experimental-debug-variable-locations=true \
