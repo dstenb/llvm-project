@@ -20,6 +20,10 @@
 # CHECK-NEXT: DW_TAG_GNU_call_site_parameter
 # CHECK-NEXT:   DW_AT_location      (DW_OP_reg1 R1)
 # CHECK-NEXT:   DW_AT_GNU_call_site_value   (DW_OP_breg4 R4-4)
+# CHECK-EMPTY:
+# CHECK-NEXT: DW_TAG_GNU_call_site_parameter
+# CHECK-NEXT:   DW_AT_location      (DW_OP_reg0 R0)
+# CHECK-NEXT:   DW_AT_GNU_call_site_value   (DW_OP_GNU_entry_value(DW_OP_reg0 R0), DW_OP_plus_uconst 0x2)
 # CHECK: DW_TAG_GNU_call_site
 # CHECK-NEXT:   DW_AT_abstract_origin {{.*}}"func2")
 # CHECK-NEXT:   DW_AT_low_pc 
