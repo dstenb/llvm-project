@@ -56,31 +56,12 @@
 ...
 ---
 name:            caller
-alignment:       16
-tracksRegLiveness: true
-noPhis:          true
-isSSA:           false
-noVRegs:         true
-hasFakeUses:     false
-debugInstrRef:   true
-tracksDebugUserValues: true
-frameInfo:
-  stackSize:       8
-  offsetAdjustment: -8
-  maxAlignment:    1
-  adjustsStack:    true
-  hasCalls:        true
-  maxCallFrameSize: 0
-  cvBytesOfCalleeSavedRegisters: 8
-  isCalleeSavedInfoValid: true
 fixedStack:
   - { id: 0, type: spill-slot, offset: -16, size: 8, alignment: 16, callee-saved-register: '$rbx' }
 callSites:
   - { bb: 0, offset: 3 }
   - { bb: 0, offset: 8, fwdArgRegs:
       - { arg: 0, reg: '$rdi' } }
-machineFunctionInfo:
-  amxProgModel:    None
 body:             |
   bb.0.entry:
     liveins: $rbx
