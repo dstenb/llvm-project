@@ -36,6 +36,7 @@
 # instructions. Last negative check should verify that we are not producing
 # interpretation for RDX register since its loaded value is call clobberable.
 # Also check that we are generating proper call site debug entities.
+# The MIR has been hand-modified in order to test those cases.
 --- |
   ; ModuleID = 'dbgcall-site-interpretation.c'
   source_filename = "dbgcall-site-interpretation.c"
