@@ -682,7 +682,7 @@ static void interpretValues(const MachineInstr *CurMI,
     return false;
   };
 
-  auto DescribeFwdRegsByCalleeSavedCopy = [&](DestSourcePair CopyInst) {
+  auto DescribeFwdRegsByCalleeSavedCopy = [&](const DestSourcePair &CopyInst) {
     Register CopyDestReg = CopyInst.Destination->getReg();
     Register CopySrcReg = CopyInst.Source->getReg();
     if (IsRegClobberedInMeantime(CopyDestReg))
