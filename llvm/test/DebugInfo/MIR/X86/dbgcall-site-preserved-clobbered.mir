@@ -97,7 +97,7 @@ body:             |
     DBG_INSTR_REF !15, !DIExpression(DW_OP_LLVM_arg, 0), dbg-instr-ref(1, 6), debug-location !18
     DBG_VALUE_LIST !15, !DIExpression(DW_OP_LLVM_arg, 0), $rbx, debug-location !18
     $rdi = MOV64rr $rax, debug-location !19
-    ; Manually inserted instruction partially convering $rbx.
+    ; Manually inserted instruction partially clobbering $rbx.
     INLINEASM &nop, 1, 12, implicit-def $bl
     CALL64pcrel32 target-flags(x86-plt) @callee, csr_64, implicit $rsp, implicit $ssp, implicit killed $rdi, implicit-def $rsp, implicit-def $ssp, debug-location !19
     $eax = MOV32rr $ebx, implicit killed $rbx, debug-location !21
